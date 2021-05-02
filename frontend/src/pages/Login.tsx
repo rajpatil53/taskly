@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Card, Typography, Button, CardContent, CardActions, Box, Divider, TextField, CircularProgress } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
@@ -76,7 +75,7 @@ const Login = (props: Props) => {
 
     useEffect(() => {
         resetAuth();
-    }, []);
+    }, [resetAuth]);
 
 
     return (

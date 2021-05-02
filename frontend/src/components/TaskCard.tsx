@@ -1,4 +1,4 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, Collapse, IconButton, Typography } from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, Collapse, IconButton, Typography } from '@material-ui/core';
 import { ExpandMore, Delete, Edit } from '@material-ui/icons';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import React from 'react';

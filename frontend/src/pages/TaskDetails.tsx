@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom';
 import { useQueries } from 'react-query';
 import { Box, CircularProgress, Divider, Grid, Typography } from '@material-ui/core';

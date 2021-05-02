@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom';
 import { useQueries } from 'react-query';
-import { Box, Button, CircularProgress, Divider, Grid, IconButton, Typography } from '@material-ui/core';
+import { Box, Button, CircularProgress, Divider, Grid, Typography } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
 import TaskCard from '../components/TaskCard';
 import ProjectLogic from '../logic/ProjectLogic';
@@ -39,7 +39,7 @@ function ProjectDetails(props: Props): ReactElement {
     }
 
     const onAddTask = () => {
-        props.history.push('/projects/${id}/tasks/edit/');
+        props.history.push(`/projects/${id}/tasks/edit/`);
     }
 
     const onEditTask = (task: Task) => {

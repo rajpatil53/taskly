@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import { Card, Typography, Button, CardContent, CardActions, Box, Divider, TextField, CircularProgress } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
@@ -63,7 +62,7 @@ const Signup = (props: Props) => {
             setError('Please enter username, password and confirm password.');
             return;
         }
-        if (password != password2) {
+        if (password !== password2) {
             setError('Confirm password did not match.');
             return;
         }
@@ -97,7 +96,7 @@ const Signup = (props: Props) => {
 
     useEffect(() => {
         resetAuth();
-    }, []);
+    }, [resetAuth]);
 
     return (
         <Box display="flex" justifyContent="center" alignItems="center" height="100vh">

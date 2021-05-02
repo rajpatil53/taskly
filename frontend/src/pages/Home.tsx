@@ -5,7 +5,6 @@ import Alert from '@material-ui/lab/Alert';
 import { RouteComponentProps } from 'react-router-dom';
 
 import ProjectCard from '../components/ProjectCard';
-import ProjectDetails from './ProjectDetails';
 import ProjectLogic from '../logic/ProjectLogic';
 import { Add } from '@material-ui/icons';
 
