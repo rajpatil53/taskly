@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import { Container } from '@material-ui/core';
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+
+import Routes from './Routes';
+
+const queryClient = new QueryClient()
+
+const darkTheme = createMuiTheme({
+    palette: {
+        type: 'dark',
+        primary: {
+            light: '#a6d4fa',
+            main: '#90caf9',
+            dark: '#648dae',
+            contrastText: '#DEDEDE'
+        },
+        secondary: {
+            light: '#f6a5c0',
+            main: '#f48fb1',
+            dark: '#aa647b',
+            contrastText: '#DEDEDE'
+        },
+    },
+});
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <ThemeProvider theme={darkTheme}>
+                <Container maxWidth="lg">
+                    <Router>
+                        <Routes />
+                    </Router>
+                </Container>
+            </ThemeProvider>
+        </QueryClientProvider>
+    );
 }
 
 export default App;
