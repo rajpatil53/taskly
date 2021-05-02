@@ -157,7 +157,11 @@ REST_FRAMEWORK = {
     ],
 }
 
-ACCESS_TOKEN_LIFETIME = timedelta(days=1)
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+}
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
 MEDIA_URL = "/uploads/"

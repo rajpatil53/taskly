@@ -32,8 +32,8 @@ const useStyles = makeStyles({
 
 const Login = (props: Props) => {
     const classes = useStyles();
-    const [username, setUsername] = useState('user1234');
-    const [password, setPassword] = useState('user1234');
+    const [username, setUsername] = useState('user');
+    const [password, setPassword] = useState('test_user');
     const [isLoading, setisLoading] = useState(false);
     const [error, setError] = useState('');
     const setUsernameInStore = useAuthStore(setUsernameSelector);
